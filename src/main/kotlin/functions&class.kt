@@ -1,12 +1,13 @@
+import com.shreks.Person2
+
 fun main () {
 
     var personObj = Person()
     personObj.name = "guga"
     personObj.display(personObj.name) //codigo roda normalmente apenas com o personObj.display()
 
-    var personObj2 = Person2()
-    personObj2.name2 = "Agustinho Carrara"
-    println("The name of the person is ${personObj2.name2} ")
+    var personObj2 = Person2("Agustinho Carrara")
+    personObj2.display()
 }
 
 class Person {
@@ -18,7 +19,3 @@ class Person {
     }
 }
 
-class Person2 {
-
-    var name2:String = ""
-}
