@@ -2,7 +2,7 @@ fun main () {
     var name: String //colocar o tipo sempre, pois caso eu não passe o valor agora, posso passar depois
     name = "guga"
 
-    //Tudo em Kotlin é objeto. (assim como no JavaScript
+    //Tudo em Kotlin é objeto. (assim como no JavaScript)
     var age: Int = 10
     var isAlive: Boolean = true
     var marks: Float = 97.4F //se for usar . colocar o F, para entender que o tipo é Float, e não Double
@@ -19,5 +19,13 @@ fun main () {
     } else {
         println(false)
     }
+
+    var fullName: String = "guga Padilha"
+    println(fullName)
+
+    fullName = ""
+    println(fullName) //retorna apenas um espaço en branco
+
+    println(fullName.isEmpty()) //retona true pois o fullName está sem valor algum
 
 }
