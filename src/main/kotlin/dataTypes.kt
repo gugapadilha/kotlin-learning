@@ -16,7 +16,7 @@ fun main () {
     val myInt: Int = 32 // 32-bit signer integer
     val myLong: Long = 64 // 64-bit signed integer
 
-    //decimals
+    //DECIMAIS
     val myFloat: Float = 32.00F // 32-bit floating point number
     var myDouble: Double = 64.00 // 64-bit floating point number
 
@@ -35,7 +35,6 @@ fun main () {
     //obrigado usar aspas simples. // single quote: Char
 
 
-
     //Exemplos
     var numeros: Int = 10
     println(numeros + 10)
@@ -47,14 +46,27 @@ fun main () {
         println(false)
     }
 
+    val x: Char = 'G'
+    println(x + 'P'.toString())
 
     var fullName: String = "guga Padilha"
     println(fullName)
 
     fullName = ""
-    println(fullName) //retorna apenas um espaço en branco
+    println(fullName) //retorna apenas um espaço em branco
 
     println(fullName.isEmpty()) //retona true pois o fullName está sem valor algum
 
 
+    //TRIPLE QUOTES
+
+    var message: String = """
+        |Hello,
+        |My name is Gustavo Padilha
+        |How are you 
+    """.trimMargin() //faz a identacao sem os epaços caso tenha algo antes
+        //.replaceIndent( "abc-|-") coloca antes da frase (nos espaços em branco)
+        //.trimIndent() //minimal identation, se nao colocar, a frase fica com lacunas
+
+    println(message)
 }
