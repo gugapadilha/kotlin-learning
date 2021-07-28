@@ -63,10 +63,24 @@ fun main () {
     var message: String = """
         |Hello,
         |My name is Gustavo Padilha
-        |How are you 
+        |How are you?
     """.trimMargin() //faz a identacao sem os epaços caso tenha algo antes
         //.replaceIndent( "abc-|-") coloca antes da frase (nos espaços em branco)
         //.trimIndent() //minimal identation, se nao colocar, a frase fica com lacunas
 
     println(message)
+
+
+    //STRINGS INTERPOLATION
+
+    val rect = Rectangle() //.rect pra acessar o length e breadth que foi definido.
+     rect.length = 5
+     rect.breadth = 3
+
+    print("The lenght of rectangle is ${rect.length}.The breadth is ${rect.breadth}.The area is: ${rect.length * rect.breadth}")
+}
+
+class Rectangle {
+    var length: Int = 0
+    var breadth: Int = 0
 }
