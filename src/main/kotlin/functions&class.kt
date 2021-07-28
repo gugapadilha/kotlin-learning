@@ -1,4 +1,4 @@
-import com.shreks.Person2
+import com.shreks.Person2 //importando da outra pasta com.shreks(criada dentro de kotlin)
 
 fun main () {
 
@@ -18,6 +18,3 @@ class Person {
         println(name)
     }
 }
-
-
-

@@ -1,4 +1,4 @@
-package com.shreks
+package com.shreks //exportando para a pasta functions&class
 
 class Person2(var name2: String) {
 
