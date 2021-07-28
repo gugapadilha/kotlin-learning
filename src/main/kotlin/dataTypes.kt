@@ -76,6 +76,7 @@ fun main () {
     val rect = Rectangle() //.rect pra acessar o length e breadth que foi definido.
      rect.length = 5
      rect.breadth = 3
+    //15 -> total
 
     print("The lenght of rectangle is ${rect.length}.The breadth is ${rect.breadth}.The area is: ${rect.length * rect.breadth}")
 }
