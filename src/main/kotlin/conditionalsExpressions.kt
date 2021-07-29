@@ -59,8 +59,20 @@ fun main () {
 
     var lenght3 = firstName?.substring(0, 2)?.length
     println(lenght3)
-}
 
+
+
+    //ELVIS OPERATOR
+
+    var ultimoNome: String? = "Guga"
+
+    var tamanho: Int = if(ultimoNome != null) ultimoNome.length else 0
+
+    val tamanho2: Int = ultimoNome?.length?: 0 //O que for passado no lado esquerdo, retornará no direito
+    //se o ultimoNome for nulo, retorne 0, caso contrário, retorne o length
+    println(tamanho2)
+
+}
 
 class Persons(var name: String) //false, pois a E b não são os mesmos
 
