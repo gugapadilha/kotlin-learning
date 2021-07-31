@@ -97,7 +97,7 @@ fun main () {
         outer@ for (m in 1..3) {
             for (n in 1..3){
                 if(m == 2 && n == 2){
-                    continue@outer
+                    continue@outer //falando pro outer quebrar fora do primeiro loop
                 }
                 println("$m $n")
             }
