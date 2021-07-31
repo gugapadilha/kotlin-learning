@@ -1,5 +1,5 @@
 fun main () {
-    //WHEN - numero igual
+    //WHEN LOOP - numero igual
     val x = 11
 
     when(x) {
@@ -25,10 +25,81 @@ fun main () {
     println(str)
 
 
-    //FOR - numero par
+    //FOR LOOP - nameList & numero par
 
     var nomes = arrayOf("Arthur", "Guga", "Pegueto")
     for (i in nomes) {
         println(i)
     }
+
+    for (i in 1..10){
+        if(i % 2 == 0){
+            println(i)
+        }
+    }
+
+
+    //WHILE LOOP - numero impar
+
+    var i: Int = 1
+
+    while(i <= 10){
+        if(i % 2 !== 0){
+            println(i)
+        }
+        i++
+    }
+
+
+    //DO WHILE LOOP - numero par até 5
+    var c: Int = 1
+
+    do {
+        if(c % 2 == 0){
+            println(c)
+        }
+        c++
+    }while (c <= 5)
+
+
+    //BREAK LOOP numero 3
+
+    for (i in 1..20) {
+        println(i)
+        if (i == 3){
+            break //quebrou quando chegou no 3
+        }
+    }
+
+    //BREAK LOOP 2 2 E PARE
+
+   myLoop@for (x in 1..3){
+        for(y in 1..3){
+            println("$x $y")
+            if(x == 2 && y == 2){ //quando a condicao for igual a (2 2) ele para.
+                break@myLoop //falando para o break quebrar fora do primeiro for loop
+            }
+        }
+    }
+
+    //BREAK LOOP 5 E CONTINUE
+
+    for (i in 1..10){
+        if(i == 5){ //pulou o numero 5, e depois rodou normalmente o resto
+            continue
+        }
+        println(i)
+    }
+
+
+    //BREAK LOOP 2 2 E CONTINUE
+
+        outer@ for (m in 1..3) {
+            for (n in 1..3){
+                if(m == 2 && n == 2){
+                    continue@outer
+                }
+                println("$m $n")
+            }
+        }
 }
