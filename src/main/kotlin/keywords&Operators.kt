@@ -72,7 +72,8 @@ fun main () {
     }
 
     //BREAK LOOP 2 2 E PARE
-    //Um break qualificado com um rótulo @ PULA para o ponto de execução logo após o loop que foi marcado com aquele rótulo @.
+    //Um break qualificado com um rótulo ( @ ) PULA para o ponto de execução logo após
+    // o loop que foi marcado com aquele rótulo ( @ ).
 
    myLoop@for (x in 1..3){
         for(y in 1..3){
