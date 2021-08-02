@@ -102,7 +102,7 @@ fun main () {
                 if(m == 2 && n == 2){
                     continue@outer //falando pro outer quebrar fora do primeiro loop
                 }
-                println("$m $n")
+                println("$m $n") //graças ao @outer, ele não printou o 2 3. Parou quando chegou no 2 2
             }
         }
 }
