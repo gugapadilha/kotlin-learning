@@ -72,6 +72,7 @@ fun main () {
     }
 
     //BREAK LOOP 2 2 E PARE
+    //Um break qualificado com um rótulo @ PULA para o ponto de execução logo após o loop que foi marcado com aquele rótulo @.
 
    myLoop@for (x in 1..3){
         for(y in 1..3){
@@ -83,6 +84,7 @@ fun main () {
     }
 
     //BREAK LOOP 5 E CONTINUE
+    //O continue prossegue para a próxima iteração desse loop.
 
     for (i in 1..10){
         if(i == 5){ //pulou o numero 5, e depois rodou normalmente o resto
@@ -93,13 +95,14 @@ fun main () {
 
 
     //BREAK LOOP 2 2 E CONTINUE
+    //O continue prossegue para a próxima iteração desse loop.
 
         outer@ for (m in 1..3) {
             for (n in 1..3){
                 if(m == 2 && n == 2){
                     continue@outer //falando pro outer quebrar fora do primeiro loop
                 }
-                println("$m $n")
+                println("$m $n") //graças ao @outer, ele não printou o 2 3. Parou quando chegou no 2 2
             }
         }
 }
