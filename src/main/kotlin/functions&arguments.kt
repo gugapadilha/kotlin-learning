@@ -29,6 +29,11 @@ fun main () {
     userInformation("guga", 19)
     userInformation("john", 34, "blue")
     userInformation("sophia", favColor = "blue")
+
+    //TWO WAYS TO PRINT
+    var newVolume = findVolume(5, 5, 5)
+    println(newVolume)
+    //println(findVolume(5, 5, 5)) //assim pode normalmente, printando direto
 }
 
 //CALL FUNCTIONS IN THE SAME FUNCTION
@@ -93,6 +98,11 @@ fun bookInfo (title: String, vararg authors: String){
 
 //OVERLOAD FUNCTION
 
-fun userInformation(name: String, age: Int = 0, favColor: String = ""){
+fun userInformation(name: String, age: Int = 0, favColor: String = "Red"){
     println("nome: $name, idade: $age, cor favorita: $favColor")
+}
+
+//TWO WAYS TO PRINT
+fun findVolume (lenght: Int, breadth: Int, height: Int): Int {
+    return lenght * breadth * height
 }
