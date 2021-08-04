@@ -1,5 +1,3 @@
-import java.math.BigInteger
-
 fun main () {
 
     var student = Student()
@@ -13,10 +11,18 @@ fun main () {
     val greaterVal = x.greaterValue(y) //normalmente passada assim com extension function.
     //val greaterVal = x greaterValue y //com infix function posso passar os valores desta forma.
     println(greaterVal)
+
+
+    //INFIX 2 - menor idade
+    val m: Int = 15
+    val n: Int = 21
+
+    val minusAge = m lessAge  n
+    println(minusAge)
 }
 
 
-//Basicamente Extension Functions servem para  adicionar funções em classes, sem declara-las
+//Basicamente Extension Functions servem para  adicionar funções em classes, sem declara-las.
 //Novas funcoes adicionas tem novas propriedades estáticas
 
 fun Student.isScholar(marks: Int): Boolean {
@@ -38,5 +44,14 @@ infix fun Int.greaterValue(other: Int): Int {
         return this
     }else {
         return other //other é o "y"
+    }
+}
+
+//INFIX 2
+infix fun Int.lessAge(other: Int): Int {
+    if (this < other) {
+        return this
+    }else {
+        return other
     }
 }
