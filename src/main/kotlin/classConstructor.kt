@@ -1,6 +1,6 @@
 fun main () { //pegando a class de Usuario.kt
 
-    var usuario = Usuario("guga", "padilha")
+    var usuario = Usuario("guga", "padilha", false) //continua printando true(outro constrtutor)
     usuario.nomeCompleto()
     usuario.tamanhoNome() //do primeiro nome
 
