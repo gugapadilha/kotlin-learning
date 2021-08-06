@@ -13,7 +13,7 @@ class Usuario constructor(var primeiroNome: String, var ultimoNome: String, var 
     }*/                       //por fim, ele roda o segundo constructor
 
     fun nomeCompleto() {
-        println(" $primeiroNome $ultimoNome")
+        println("$primeiroNome $ultimoNome")
     }
 
     fun tamanhoNome() {

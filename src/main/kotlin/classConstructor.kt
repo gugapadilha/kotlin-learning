@@ -1,10 +1,10 @@
 fun main () { //pegando a class de Usuario.kt
 
-    var proprietario = Usuario("guga", "padilha", false) //continua printando true(outro constrtutor)
+    val proprietario = Usuario("guga", "padilha", false) //continua printando true(outro constrtutor)
     proprietario.nomeCompleto()
     proprietario.tamanhoNome() //do primeiro nome
 
-    var visitante = Usuario("augustinho", "carrara")
+    val visitante = Usuario("augustinho", "carrara")
     visitante.nomeCompleto()
     visitante.tamanhoNome()
 
