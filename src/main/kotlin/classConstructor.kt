@@ -1,8 +1,8 @@
 fun main () { //pegando a class de Usuario.kt
 
-    var usuario = Usuario("guga", "padilha", false) //continua printando true(outro constrtutor)
-    usuario.nomeCompleto()
-    usuario.tamanhoNome() //do primeiro nome
+    var proprietario = Usuario("guga", "padilha", false) //continua printando true(outro constrtutor)
+    proprietario.nomeCompleto()
+    proprietario.tamanhoNome() //do primeiro nome
 
     var visitante = Usuario("augustinho", "carrara")
     visitante.nomeCompleto()
@@ -13,4 +13,3 @@ fun main () { //pegando a class de Usuario.kt
     visitante.tamanhoNome()
 
 }
-

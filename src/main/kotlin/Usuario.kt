@@ -1,4 +1,4 @@
-class Usuario constructor(var primeiroNome: String, var ultimoNome: String, var clientePlat: Boolean) { //exportando par classConstructor.kt
+class Usuario constructor(var primeiroNome: String, var ultimoNome: String, var clientePlat: Boolean) { //exportando por classConstructor.kt
 
     constructor(primeiroNome: String, ultimoNome: String): this(primeiroNome, ultimoNome, true){
         if(clientePlat == false){
@@ -7,6 +7,10 @@ class Usuario constructor(var primeiroNome: String, var ultimoNome: String, var 
             println("cliente platina é true")
         }
     }
+
+    /*init {                    //antes de rodar o constructor ele roda primeiro o init
+        println("ola usuario") //depois ele vai para o construtor, e após, roda o init novamente
+    }*/
 
     fun nomeCompleto() {
         println(" $primeiroNome $ultimoNome")
@@ -19,5 +23,4 @@ class Usuario constructor(var primeiroNome: String, var ultimoNome: String, var 
     fun atualizarNome(novoNome: String) {
         primeiroNome = novoNome
     }
-
 }
