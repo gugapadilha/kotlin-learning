@@ -16,4 +16,6 @@ fun main () { //pegando a class do User.kt
     friend.printFullName()
     friend.printWithPrefix("Ms")
     friend.lengthFirstName()
+    friend.idade = 29
+    friend.mostrarIdade(29)
 }

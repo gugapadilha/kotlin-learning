@@ -2,6 +2,7 @@ class User { //exportando para o classes.kt
 
     var firstName: String = ""
     var lastName: String = ""
+    var idade: Int = 0
 
     fun printFullName() {
         println("$firstName $lastName")
@@ -21,5 +22,9 @@ class User { //exportando para o classes.kt
 
     fun lengthFirstName() {
         println(firstName.length)
+    }
+
+    fun mostrarIdade(Idade: Int){
+        println("a sua idade é: $idade")
     }
 }

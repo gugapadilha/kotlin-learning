@@ -10,7 +10,7 @@ class Usuario constructor(var primeiroNome: String, var ultimoNome: String, var 
 
     /*init {                    //antes de rodar o constructor ele roda primeiro o init
         println("ola usuario") //depois ele vai para o construtor, e após, roda o init novamente
-    }*/
+    }*/                       //por fim, ele roda o segundo constructor
 
     fun nomeCompleto() {
         println(" $primeiroNome $ultimoNome")
