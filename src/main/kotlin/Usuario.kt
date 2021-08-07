@@ -1,6 +1,6 @@
 class Usuario constructor(var primeiroNome: String, var ultimoNome: String, var clientePlat: Boolean) { //exportando por classConstructor.kt
 
-    constructor(primeiroNome: String, ultimoNome: String): this(primeiroNome, ultimoNome, true){
+    constructor(primeiroNome: String, ultimoNome: String):this(primeiroNome, ultimoNome, true){ /*chamada para o primeiro construtor*/
         if(clientePlat == false){
             println("cliente platina é false")
         }else {
