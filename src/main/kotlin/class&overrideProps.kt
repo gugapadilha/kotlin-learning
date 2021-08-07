@@ -17,7 +17,7 @@ class Dados(var nome: String, var sobrenome: String) {
             if (value.startsWith("joe")){ //se começar com "joe"...
                 field = "joe donn" //adicione o donn no final
             }else {
-                field = value
+                field = value //caso contrario, escreva o novo nome normalmente.
             }
         }
 }
