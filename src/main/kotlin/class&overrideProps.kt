@@ -7,6 +7,8 @@ fun main () {
 
     usuario.nomeCompleto = "augustinho carrara"
     println(usuario.nomeCompleto)
+
+    println(usuario.nomeCompletoLength())
 }
 
 class Dados(var nome: String, var sobrenome: String) {
@@ -20,4 +22,8 @@ class Dados(var nome: String, var sobrenome: String) {
                 field = value //caso contrario, escreva o novo nome normalmente.
             }
         }
+
+    fun nomeCompletoLength(): Int { //se a var nomeCompleto fosse uma fun, poderia chamar da mesma forma
+        return nomeCompleto.length
+    }
 }
