@@ -31,6 +31,6 @@ object CustomersData: MySuperClass() {
     }
 
     init {
-        println("Hello there")
+        println("Hello there") //the init always will be the first to be printed
     }
 }
