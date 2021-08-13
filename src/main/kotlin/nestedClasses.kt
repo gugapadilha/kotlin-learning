@@ -14,17 +14,17 @@ fun main () {
 
 
     //STUDENTS
-    var student = Students()
+    val student = Students()
     student.formation()
 
-    var inGraduation = Students.Graduation()
+    val inGraduation = Students.Graduation()
     inGraduation.formation()
 
-    var inPrimary = Students.PrimarySchool()
+    val inPrimary = Students.PrimarySchool()
     inPrimary.formation()
 
     //Nested classes can access external classes members.
-    //Kotlin define uma referência para um objeto da classe externa
+    //Kotlin auto define a reference to an object of the external class
 }
 
 class Vehicle {
