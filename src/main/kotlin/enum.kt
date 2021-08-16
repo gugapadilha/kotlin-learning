@@ -15,6 +15,11 @@ fun main () {
     println(value.discountPercent)
     println(value.numberOfSubscriptions)
 
+    /* STATIC METHODS*/
+    val showName = AccountType.getAccountTypeByName("silVER")
+    println(showName)
+
+    /* ITERATE OVER ENUM VALUES*/
     AccountType.values().forEach { println(it) } //percorrendo a lista accountType
 
 }
@@ -23,5 +28,10 @@ enum class AccountType(var discountPercent: Int,var numberOfSubscriptions: Int) 
     BRONZE(10, 20),
     SILVER(15, 10),
     GOLD(20, 5),
-    PLATINIUM(25, 2)
+    PLATINIUM(25, 2);
+
+    /* STATIC METHODS */
+    companion object {
+        fun getAccountTypeByName(name: String) = valueOf(name.toUpperCase())
+    }
 }
