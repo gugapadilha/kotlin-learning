@@ -42,13 +42,5 @@ fun main () {
 */
 }
 
-enum class AccountsType {
-    BRONZE,
-    SILVER,
-    GOLD,
-    PLATINIUM
-}
+class AnUser(var name: String, var lastName: String, var age: Int)
 
-class AnUser(var name: String, var lastName: String, var age: Int){
-
-}
