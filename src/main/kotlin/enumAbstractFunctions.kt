@@ -4,6 +4,13 @@ fun main () {
     println(fromApi.toUpperCase())
     println(accountTypes.calculatedDiscountPercent())
 
+    /* EXEMPLO FOR EACH E IN - PERCORRER A CLASS */
+   // AccountType.values().forEach { println(it) } //mesma coisa que o de baixo(printa todos os elementos)
+
+    for(AccountTypes in AccountType.values()) {
+        println(AccountTypes)
+    }
+    /* FIM EXEMPLO FOR EACH E IN - PERCORRER A CLASS */
 }
 
 enum class AccountTypes() {
