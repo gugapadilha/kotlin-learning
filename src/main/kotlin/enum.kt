@@ -15,6 +15,8 @@ fun main () {
     println(value.discountPercent)
     println(value.numberOfSubscriptions)
 
+    AccountType.values().forEach { println(it) } //percorrendo a lista accountType
+
 }
 
 enum class AccountType(var discountPercent: Int,var numberOfSubscriptions: Int) {
