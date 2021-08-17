@@ -27,6 +27,18 @@ fun main () {
     println(component2) //i just have to change to the equal name upside
     println(canivete) //and will printed in order like i pass in the class
 
+
+    //PAIR AND TRIPLE DATA CLASSES
+
+    var pair: Pair<String, String> = "foo" to "bar"
+    println(pair.first)
+    println(pair.second)
+
+    val triple = Triple("zoo", false, 10) //can be anithing
+    println(triple.second)
+
+    var tripleCopy = triple.copy()
+    println(tripleCopy.third)
 }
 
 data class Order(val amount: Int, val costumer: UmaPessoa)
