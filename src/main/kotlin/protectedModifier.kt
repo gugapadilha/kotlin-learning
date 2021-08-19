@@ -10,7 +10,7 @@ fun main () {
 }
 
 open class Pessoals(var name: String, var age: Int) {
-    
+
     fun info () {
         println("this person's name is $name and they are $age yo")
     }
