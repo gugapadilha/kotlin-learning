@@ -1,4 +1,9 @@
-fun main () {
+fun main (
+    //xisdead: Cow
+    //i never cannot instance a interface
+    //i pass as parameter
+
+) {
     // Dependenci Injection - get it from constructor or setter
     val fileSystem: FileSystem = getFileSystem()
     fileSystem.readFile() //actualReadFile
@@ -8,10 +13,10 @@ fun main () {
     aCow.moo()
     aCow.walk()
 
-    //val newCow = SmartCow()
-    //newCow.walk()
-}
+    val newCow = SmartCow()
+    newCow.walk()
 
+}
 fun getFileSystem(): FileSystem {
     return Fat32FileSystem.MemoryFileSystem(listOf("path/to/file", "/another/path"), "file-contents-go-here")
 }
@@ -75,13 +80,9 @@ class SpottedCow(override var hasHands: Boolean = false): Cow {
     }
 }
 
-class SmartCow(override var hasHands: Boolean): Cow {
+class SmartCow(override var hasHands: Boolean = false): Cow {
     override fun walk() {
-        println("ridding a skateboard")
-    }
-
-    override fun moo() {
-        println("Moo mooo mooo moo")
+        TODO("Not yet implemented")
     }
 }
 
