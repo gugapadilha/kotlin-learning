@@ -3,6 +3,13 @@ fun main () {
     val fileSystem: FileSystem = getFileSystem()
     fileSystem.readFile() //actualReadFile
     fileSystem.readDir() //empty list
+
+    val aCow = SpottedCow()
+    aCow.moo()
+    aCow.walk()
+
+    //val newCow = SmartCow()
+    //newCow.walk()
 }
 
 fun getFileSystem(): FileSystem {
@@ -67,6 +74,7 @@ class SpottedCow(override var hasHands: Boolean = false): Cow {
         println("Walking on 4 legs")
     }
 }
+
 class SmartCow(override var hasHands: Boolean): Cow {
     override fun walk() {
         println("ridding a skateboard")
