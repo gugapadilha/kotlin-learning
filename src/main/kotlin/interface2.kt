@@ -1,5 +1,9 @@
 fun main () {
     //Implement Interface
+
+    val discontos = DigitalProduct() //implementing the class thats is above de discountable
+    discontos.foo()
+    discontos.discountPercent()
 }
 
 interface Discountable {
@@ -15,6 +19,7 @@ class DigitalProduct: Discountable {
     override fun foo() {
         TODO("Not yet implemented")
     }
+
 }
 
 class GenericToy: Discountable {
