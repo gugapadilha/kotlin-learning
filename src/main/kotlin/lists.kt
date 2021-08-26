@@ -10,6 +10,58 @@ fun main () {
     //val adults = ages.filter { it >= 18 } //i can pass the value directly
     val adults: List<Int> = ages.filter(::isAdult) //or i can call the fun isAdult
     println(adults)
+
+
+    //FIND ITEM IN LIST - if contains parts of string, will return de currently string
+
+    val result = names.lastOrNull {(it.toLowerCase().contains("hug"))}
+    println(result)
+
+
+    //FILTER NOT IN LIST - if not contains the letter, then will print these string's
+
+    val aList = names.filterNot { it.contains("a") }
+    println(aList)
+
+
+    //CREATE A NEW LIST FROM A EXISTING LIST - printing the names without letter a from the 2 lists
+
+    val aproved: MutableList<String> = mutableListOf("Daniele", "Paul") //has to be a mutable list.
+
+    names.filterTo(aproved,){ it.contains("a")}
+    println(aproved)
+    println("#######")
+
+
+    //FLATTEN A LIST (OR AN ARRAY) - to bring together a lot of lists to the unic one
+
+    //LISTOF
+    val mine = listOf<String>("Apples, Grapes")
+    val theirs = listOf<String>("Oranges", "Pears", "Strawberries")
+    val others = listOf<String>("Kiwi, Watermelon")
+    val allOfUs: List<List<String>> = listOf(mine, theirs, others)
+
+    println(allOfUs)
+    println(allOfUs.flatten())
+    println("#######")
+
+    //ARRAYOF
+    val mineArray = arrayOf<String>("Apples", "Grapes")
+    val theirsArray = arrayOf<String>("Oranges", "Pears", "Strawberries")
+    val othersArray = arrayOf<String>("Kiwi, Watermelon")
+    val allArrays: Array<Array<String>> = arrayOf(mineArray, theirsArray)
+
+    println(allArrays)
+    println(allArrays.flatten())
+    println("#######")
+
+    //I CAN COMBINE MULTIPLE IMMUTABLE LISTS TOO
+    val resultado = mine.plus(theirs).plus(others)
+    println(resultado)
+
+    println(resultado.minus(theirs))
+    println(resultado.minus("kiwi".toLowerCase()))
+
 }
 
 fun isAdult(value: Int): Boolean {
