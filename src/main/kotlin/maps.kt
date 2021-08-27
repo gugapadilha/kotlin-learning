@@ -40,8 +40,30 @@ fun main () {
 
     val clothes = retailBags.map { it.items }
     println(clothes)
+    
+    
+    //SET DATA STRUCTURE (LIST WITH NO DUPLICATES)
+
+    val names = mutableSetOf<String>("Guga", "Donn", "Matilda") //by efault is immutable too, like list and arrays.
+    println(names)
+
+    names.add("Jenny")
+    println(names)
+
+    names.add("Guga")
+    println(names) //doesnt add because Guga already exist in that setOf
+
+
+    val newPeople = setOf<Names>(
+        Names("Donn"),
+        Names("Donn"),
+        Names("Margaret")
+    )
+    println(newPeople) //doesnt repeat the same name cause i'm using data class, else would return 2 different objects.
 }
 
 class PersonNames(val name:String)
 
 class ShoppingBag(val items: List<String>)
+
+data class Names(val name: String)
