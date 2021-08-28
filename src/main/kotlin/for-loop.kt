@@ -19,6 +19,12 @@ fun main () {
         println(human)
     }
 
+    //peoples.forEach { println(it) } do the same thing as the for in the top
+
+    peoples.map{it.name} //doing a map of the names
+        .map{ it.toUpperCase()} //putting names to upper case
+        .forEach { println(it.reversed()) }//finally print in reversed in upper case
+
 }
 
 data class PeopleNome(val name: String)
