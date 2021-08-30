@@ -62,8 +62,33 @@ fun main () {
     println(resultado.minus(theirs))
     println(resultado.minus("kiwi".toLowerCase()))
 
+
+    //UNION OPERATOR - AGROUPH LIST WITHOUT REPEAT THE SAME NAMES
+
+    val peopleList = listOf<DifferentPerson>(
+        DifferentPerson("Guga"),
+        DifferentPerson("Donn"),
+        DifferentPerson("John"),
+        DifferentPerson("Lucrecia")
+    )
+
+    val morePeopleList = listOf<DifferentPerson>(
+        DifferentPerson("Guga"),
+        DifferentPerson("Deniels"),
+        DifferentPerson("Donn"),
+        DifferentPerson("John"),
+        DifferentPerson("Isaias")
+    )
+
+    val uniqueValues: Set<DifferentPerson> = peopleList.union(morePeopleList).union(listOf(DifferentPerson("Donn")))
+    println(uniqueValues) //if i try to add a new value that already exist, they not gonna repeat as well
+
 }
 
 fun isAdult(value: Int): Boolean {
     return value >= 18
 }
+
+data class DifferentPerson(var name: String)
+
+
