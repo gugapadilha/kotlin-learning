@@ -60,6 +60,19 @@ fun main () {
         Names("Margaret")
     )
     println(newPeople) //doesnt repeat the same name cause i'm using data class, else would return 2 different objects.
+
+
+    //CREATE A MAP
+
+    val states = mapOf<String, String>(
+        "NY" to "New York",
+        "NJ" to "New Jersey",
+        "CA" to "California"
+    )
+
+    //val result: String? = states.get("NY") //if doesnt exist, will return "null" by default
+    val result: String = states.getOrDefault("FL", "Unknown Value")
+    println(result)
 }
 
 class PersonNames(val name:String)
