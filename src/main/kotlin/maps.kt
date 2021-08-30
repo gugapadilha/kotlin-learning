@@ -73,6 +73,28 @@ fun main () {
     //val result: String? = states.get("NY") //if doesnt exist, will return "null" by default
     val result: String = states.getOrDefault("FL", "Unknown Value")
     println(result)
+
+
+    //MUTABLE MAP
+    var newItems = mutableMapOf<String, String>(
+        "GU" to "Guga",
+        "RA" to "Rafaela",
+        "MA" to "Matheus"
+    )
+
+    newItems.put("CA", "Carol")
+    println(newItems)
+
+    newItems.putIfAbsent("GU", "Gustavo") //if already contains gu, them will print the existed one
+    println(newItems)                     //else, will create a new name in that list.
+
+    newItems.remove("RA")
+    println(newItems)
+
+    newItems.getOrPut("BE", {"Bernardo"}) //saying to get the key BE, but if isnt in the list
+    println(newItems)                         //them simply will return the actuall name Bernardo
+
+
 }
 
 class PersonNames(val name:String)
