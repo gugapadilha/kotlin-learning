@@ -83,6 +83,13 @@ fun main () {
     val uniqueValues: Set<DifferentPerson> = peopleList.union(morePeopleList).union(listOf(DifferentPerson("Donn")))
     println(uniqueValues) //if i try to add a new value that already exist, they not gonna repeat as well
 
+
+
+    //ITERATE OVER A LIST WITH AN INDEX FOREACHINDEX
+
+    peopleList.forEachIndexed { index, differentPerson ->
+        println("Index: $index, DifferentPerson: $differentPerson")
+    }
 }
 
 fun isAdult(value: Int): Boolean {
