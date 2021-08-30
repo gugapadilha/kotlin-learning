@@ -112,6 +112,12 @@ fun main () {
         .mapValues { it.value.substring(0, 3) } //print with the actuall KEY too
         .mapKeys { it.key.toLowerCase() }
     println(resultadow)
+
+
+    //REMOVE NULL ITEMS
+
+    val resul: List<Map.Entry<String, String>> = newStates.mapNotNull(::findValueInWebService)
+    println(resul)
 }
 
 class PersonNames(val name:String)
@@ -119,3 +125,11 @@ class PersonNames(val name:String)
 class ShoppingBag(val items: List<String>)
 
 data class Names(val name: String)
+
+fun findValueInWebService(entry: Map.Entry<String, String>):Map.Entry<String, String>? {
+    if (entry.key.startsWith("N")){ //so if gets null - them not gonna include it
+        return null
+    }else {
+        return entry
+    }
+}

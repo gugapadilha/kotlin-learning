@@ -38,4 +38,4 @@ open abstract class View {
 
 class Button: View()
 class Image: View()
-class Map: View()
+class Maps: View()
