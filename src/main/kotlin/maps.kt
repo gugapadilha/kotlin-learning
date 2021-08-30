@@ -95,6 +95,23 @@ fun main () {
     println(newItems)                         //them simply will return the actuall name Bernardo
 
 
+
+    //TRANSFORM MAPS
+
+    var newStates = mutableMapOf<String, String>(
+        "CA" to "California",
+        "NY" to "New York",
+        "NJ" to "New Jersey",
+        "RJ" to "Rio de Janeiro",
+        "SP" to "São Paulo"
+    )
+
+    val resultadow = newStates.filter { it.key.contains("N") } //i can use newStates.filterKey
+        //thats all transform the values but maintain the map structure
+        //.map { it.value.substring(0, 3) } //new jersey and new york
+        .mapValues { it.value.substring(0, 3) } //print with the actuall KEY too
+        .mapKeys { it.key.toLowerCase() }
+    println(resultadow)
 }
 
 class PersonNames(val name:String)
