@@ -22,6 +22,12 @@ fun main () {
     val obj3: Any = getStuff("5") //can change this value to print in return what i want to
     val casted: NamePerson = obj3 as NamePerson //i can passa Int / Int OR String / String too.
     println(casted)
+
+
+    //CASTIGN WITH AS
+    val obj4: Any = getStuff("2")
+    val casted2: Int? = obj4 as? Int //in this case, it tries to always return a Int - else will return null
+    println(casted2)
 }
 
 fun getStuff(value: String): Any {
