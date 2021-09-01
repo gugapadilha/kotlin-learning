@@ -1,4 +1,6 @@
 fun main () {
+
+    //CHECKING TYPE IS
     val obj: Any = AnOrder(120)
     if(obj is String) { //Any can be anything, always return it's is - I can pass String,Int,Double... tho
         println("it's is")
@@ -15,6 +17,11 @@ fun main () {
         println("no its not")
         println(obj2.javaClass.name)
     }
+
+    //TYPE CASTING
+    val obj3: Any = getStuff("5") //can change this value to print in return what i want to
+    val casted: NamePerson = obj3 as NamePerson //i can passa Int / Int OR String / String too.
+    println(casted)
 }
 
 fun getStuff(value: String): Any {
@@ -23,9 +30,11 @@ fun getStuff(value: String): Any {
         "2" -> "hello"
         "3" -> true
         "4" -> 16.0
+        "5" -> NamePerson("guga")
         else -> false
     }
+
 }
 
 data class AnOrder(val amount: Int)
-class NamePerson(val name: String)
+data class NamePerson(val name: String)
