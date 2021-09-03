@@ -38,22 +38,22 @@ fun main () {
         //if something goes wron with apllication, the program will print that
     }
 }
-//  //CATCH ONLY ONE EXCEPTION
-//    private fun checkAge(p3: NomeIdade) {
-//    if(p3.age < 18) {
-//        throw Exception("FOO")
-//    }
-//    println("after catch that")
-//}
-
-
-//    //CATCH MULTIPLE EXCEPTION
-private fun checkAge(p3: NomeIdade) {
+  //CATCH ONLY ONE EXCEPTION
+    private fun checkAge(p3: NomeIdade) {
     if(p3.age < 18) {
-        throw InvalidAgeMultipleExceptions("BOOM")
+        throw Exception("FOO")
     }
     println("after catch that")
 }
+
+
+//    //CATCH MULTIPLE EXCEPTION
+//private fun checkAge(p3: NomeIdade) {
+//    if(p3.age < 18) {
+//        throw InvalidAgeMultipleExceptions("BOOM")
+//    }
+//    println("after catch that")
+//}
 
 data class NomeIdade(var name: String, var age: Int)
 
