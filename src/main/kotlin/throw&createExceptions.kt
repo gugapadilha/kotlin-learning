@@ -29,18 +29,34 @@ fun main () {
         println("Done")
         println("Done")
     } catch(ex: Exception) {
+        when (ex) {
+            is InvalidAgeMultipleExceptions -> println("Invalid age")
+            is java.lang.IllegalArgumentException -> println("Illegal Argument")
+            else -> println("Something else")
+        }
         println("Caught the exception") //the application will not CRASH.
         //if something goes wron with apllication, the program will print that
     }
 }
+//  //CATCH ONLY ONE EXCEPTION
+//    private fun checkAge(p3: NomeIdade) {
+//    if(p3.age < 18) {
+//        throw Exception("FOO")
+//    }
+//    println("after catch that")
+//}
 
+
+//    //CATCH MULTIPLE EXCEPTION
 private fun checkAge(p3: NomeIdade) {
     if(p3.age < 18) {
-        throw Exception("FOO")
+        throw InvalidAgeMultipleExceptions("BOOM")
     }
     println("after catch that")
 }
 
 data class NomeIdade(var name: String, var age: Int)
 
-class InvalidAgeException(val age: Int, message: String): IllegalArgumentException("Invalid age: $age, $message")
+class InvalidAgeException(val age: Int, message: String): IllegalArgumentException("Invalid age: $age, $message") //use that in single
+
+class InvalidAgeMultipleExceptions(message: String): IllegalArgumentException(message) //use that in multiple
