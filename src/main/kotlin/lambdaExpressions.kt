@@ -17,4 +17,21 @@ fun main () {
 
     val greetingLambda: String = greeterLambda("guga", "padilha")
     println(greetingLambda)
+
+
+
+    //LAMBDA FUNCTION AS A FUNCTION PARAMETER
+
+    lineLogger {
+        println("message 1")
+        println("message 2")
+        println("message 3")
+    }
 }
+
+    fun lineLogger(block: () -> Unit) { //lambdaName is bloc, () is the inputType, Unit is the ReturnType
+
+        repeat(5) { println("--------")}
+        block() //the block is the block of code for lineLogger
+        repeat(5) { println("--------")}
+    }
