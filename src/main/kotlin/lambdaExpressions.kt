@@ -29,7 +29,7 @@ fun main () {
     }
 }
 
-    fun lineLogger(block: () -> Unit) { //lambdaName is bloc, () is the inputType, Unit is the ReturnType
+    fun lineLogger(block: () -> Unit) { //lambdaName is block, () is the inputType, Unit is the ReturnType
 
         repeat(5) { println("--------")}
         block() //the block is the block of code for lineLogger
