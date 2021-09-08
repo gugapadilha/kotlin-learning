@@ -18,6 +18,15 @@ fun main () {
     val greetingLambda: String = greeterLambda("guga", "padilha")
     println(greetingLambda)
 
+    //LAMBDA IT PARAMETER
+
+    repeat(10) { println("this is interation $it")}
+
+    repeat(10) {index: Int -> //i can pass like this as well
+        println("this is interation $index")
+    }
+
+
 
 
     //LAMBDA FUNCTION AS A FUNCTION PARAMETER
