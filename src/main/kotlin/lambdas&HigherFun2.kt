@@ -6,6 +6,12 @@ fun main () {
 
     //programa.addTwoNumbers(2, 7, {x, y -> x + y } ) //i can pass directly this way
     //programa.addTwoNumbers(2, 7) {x, y -> x + y }   //i can pass directly this way
+
+
+    //LER IDADES
+    val ages = Usuarios()
+    val idades: (Int) -> Unit = { println()}
+    ages.lerIdades(10, 25, idades)
 }
 
 class Programa {
@@ -15,3 +21,12 @@ class Programa {
         println(resultado)
     }
 }
+
+//LER IDADES
+class Usuarios {
+    fun lerIdades(idade1: Int, idade2: Int, action: (Int) -> Unit) {
+        val resul = ("as idades são $idade1 e $idade2")
+        println(resul)
+    }
+}
+
