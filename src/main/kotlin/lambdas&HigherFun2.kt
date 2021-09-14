@@ -8,6 +8,12 @@ fun main () {
     //programa.addTwoNumbers(2, 7) {x, y -> x + y }   //i can pass directly this way
 
 
+    //CLOSURES
+    //    var result = 0
+    //    programa.addTwoNumbers(2, 7) {x, y -> result = x + y }   //i can pass directly this way
+    //    println(result)
+
+
     //LER IDADES
     val ages = Usuarios()
     val idades: (Int) -> Unit = { println()}
@@ -19,6 +25,7 @@ class Programa {
 
        val resultado =  action(a, b) //x + y = a + b = 2 + 7 = 9
         println(resultado)
+        //action(a,b) //can pass just like this in closures
     }
 }
 
