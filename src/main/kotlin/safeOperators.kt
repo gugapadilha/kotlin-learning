@@ -24,4 +24,10 @@ fun main () {
 
     val aLenght = name?.length ?: -1
     println("The lenght of name is ${aLenght}")
+
+
+
+    //4. Non-null assertion operator ( !! )
+    //use it when you are sure the value is not null
+    println("The length of name is ${name!!.length}") //the name is guga, thats why doesnt throw the error.
 }
