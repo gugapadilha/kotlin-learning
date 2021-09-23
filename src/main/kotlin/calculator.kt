@@ -5,7 +5,7 @@ fun main () {
 
     while (input != null && input.isNotBlank()){ //when write enter(a blank value) the program stop
 
-        val values = input.split( " ")
+        val values = input.split(" ")
 
         if(values.size < 3) {
             println("Invalid input. Expected: value + value. Received: $input")
