@@ -12,7 +12,7 @@ fun main () {
 
 class Country {
 
-    lateinit var name: String
+    lateinit var name: String //cannot use the safe "?" //cannot use "val" too
 
     fun setup() {
         name = "Brazil"
