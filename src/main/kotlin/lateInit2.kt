@@ -1,7 +1,7 @@
 fun main () {
 
-    var country = Country()
-    country.name = "Brazil"
+    //var country = Country()
+    //country.name = "Brazil"
     println(country.name)
 }
 
