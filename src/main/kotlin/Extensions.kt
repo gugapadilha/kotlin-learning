@@ -13,5 +13,4 @@ fun Int.isAdult(): Boolean {
 fun PersonHave.fullName() = "${this.firstName} ${this.lastName}"
 
 //MODELS
-
 class PersonHave(val firstName: String, val lastName: String, val age: Int)
