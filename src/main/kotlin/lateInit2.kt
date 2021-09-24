@@ -2,7 +2,7 @@ fun main () {
 
     //var country = Country()
     //country.name = "Brazil"
-    println(country.name)
+    println(country.name)ffs
 }
 
 class Country {
