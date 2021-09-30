@@ -10,7 +10,6 @@ fun main () {
         if(values.size < 3) {
             println("Invalid input. Expected: value + value. Received: $input")
         }else {
-
             val operator = values[1]
             val lhs = values[0].toDoubleOrNull() ?: throw IllegalArgumentException("Invalid input: ${values[0]}") // left hand size
             val rhs = values[2].toDoubleOrNull() ?: throw IllegalArgumentException("Invalid input: ${values[1]}") // right hand size
