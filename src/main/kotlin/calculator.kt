@@ -1,3 +1,5 @@
+//SYMPLE CALCULATOR
+
 fun main () {
     println("Please enter an arithmetic problem... ")
     println("If you want to leave just press enter twice")
