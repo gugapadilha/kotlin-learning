@@ -1,11 +1,11 @@
-//SYMPLE CALCULATOR ATT
+//SYMPLE CALCULATOR 
 
 fun main () {
     println("Please enter an arithmetic problem... ")
     println("If you want to leave just press enter twice")
     var input = readLine()
 
-    while (input != null && input.isNotBlank()){ //when write enter(a blank value) the program stop
+    while (input != null && input.isNotBlank()){ //when write enter(a blank value) the program stops
 
         val values = input.split(" ")
 
