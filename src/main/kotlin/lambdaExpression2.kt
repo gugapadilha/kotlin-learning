@@ -18,7 +18,7 @@ fun main () {
 class Programs {
 
     fun reverseAndDisplay(str: String, myFunc: (String) -> String) { //High Level Function with lambda as parameter
-        var result = myFunc(str) //it.reversed() =====> str.reversed =====> "hello".reversed() = "olleh"
+        var result = myFunc(str) //it.reversed() =====> str.reversed =====> "hello".reversed() = "olleh" (printing this)
         println(result)
     }
 }
